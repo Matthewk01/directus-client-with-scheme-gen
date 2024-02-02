@@ -1,12 +1,17 @@
+require("dotenv").config({ path: "../.env" });
 import { authentication, createDirectus, readItems, rest } from "@directus/sdk";
 import { Schema } from "../types/directus";
 
-const client = createDirectus<Schema>("http://cms.modular.altron.net")
+const CMS_URL = "";
+const CMS_EMAIL = "";
+const CMS_PASS = "";
+
+const client = createDirectus<Schema>(CMS_URL)
   .with(authentication())
   .with(rest());
 
 (async () => {
-  await client.login("cmsadmin@modular.altron.net", "7h9g58v74eyj872");
+  await client.login(CMS_EMAIL, CMS_PASS);
   const result = await client.request(
     readItems("article_category", { limit: 3 }),
   );

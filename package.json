@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "codegen": "directus-typescript-gen --host http://cms.modular.altron.net/ --email cmsadmin@modular.altron.net --password 7h9g58v74eyj872 --outFile ./types/directus.ts",
-    "dev": "ts-node index.ts",
+    "codegen": "directus-typescript-gen --host CMS_URL --email CMS_EMAIL --password CMS_PASS --outFile ./types/directus.ts",
+    "dev": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
     "@directus/sdk": "^14.0.0",
     "@types/node": "^20.11.16",
     "directus-typescript-gen": "^1.0.0",
+    "dotenv": "^16.4.1",
     "prettier": "^3.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
