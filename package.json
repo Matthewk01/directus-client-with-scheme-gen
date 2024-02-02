@@ -1,0 +1,21 @@
+{
+  "name": "directus-client-with-scheme-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "directus-typescript-gen --host <URL> --email <EMAIL> --password <PASS> --outFile ./types/directus.ts",
+    "dev": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@directus/sdk": "^14.0.0",
+    "@types/node": "^20.11.16",
+    "directus-typescript-gen": "^1.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
