@@ -10,7 +10,7 @@ npm install
 ```bash
 npm run codegen
 ```
-4. The generated types will be in the `src/generated` folder
+4. The generated types will be in the `types/directus.ts` file
 5. Use the generated types in your code
 ```typescript
 import { Schema } from '../types/directus';
